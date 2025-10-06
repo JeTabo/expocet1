@@ -1,17 +1,18 @@
 <?php
-// Archivo de compatibilidad para establecer la conexión a la base de datos
-// Uso: require_once __DIR__ . '/conection.php';  // obtendrás $pdo listo para usar
+$host = "193.203.175.157";
+$user = "u157683007_taboada";
+$pass = "TabibitoMigajero2025";
+$db   = "u157683007_expocet2025";
 
-require_once __DIR__ . '/config.php';
+$conn = new mysqli($host, $user, $pass, $db);
 
-try {
-  $pdo = db_connect();
-} catch (Throwable $e) {
-  // Evita mostrar credenciales en pantalla
-  http_response_code(500);
-  die('Error de conexión a la base de datos.');
+if ($conn->connect_error) {
+    error_log("Error de conexión: " . $conn->connect_error); 
+    die("No se pudo conectar con la base de datos.");
 }
 
+$conn->set_charset("utf8mb4");
 ?>
+
 
 
