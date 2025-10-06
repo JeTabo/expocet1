@@ -2,11 +2,11 @@
 // Configuración de base de datos (ajusta estos valores a tu entorno)
 // Recomendado: usar variables de entorno en producción
 
-$DB_HOST = getenv('DB_HOST') ?: '127.0.0.1';
+$DB_HOST = getenv('DB_HOST') ?: '193.203.175.157';
 $DB_PORT = getenv('DB_PORT') ?: '3306';
-$DB_NAME = getenv('DB_NAME') ?: 'expocet1';
-$DB_USER = getenv('DB_USER') ?: 'root';
-$DB_PASS = getenv('DB_PASS') ?: '';
+$DB_NAME = getenv('DB_NAME') ?: 'u157683007_expocet2025';
+$DB_USER = getenv('DB_USER') ?: 'u157683007_taboada';
+$DB_PASS = getenv('DB_PASS') ?: 'TabibitoMigajero2025';
 
 function db_connect(): PDO {
   global $DB_HOST, $DB_PORT, $DB_NAME, $DB_USER, $DB_PASS;
@@ -25,5 +25,6 @@ if (!defined('SITES_TABLE')) {
 }
 
 ?>
+
 
 
